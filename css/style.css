@@ -664,6 +664,11 @@ h6 {
     padding-bottom: 1.25rem;
   }
 }
+@media (max-width: 47.99875em) {
+  .page__fullscreen {
+    background: url("../img/full.jpeg") center/cover no-repeat;
+  }
+}
 
 .fullscreen {
   min-height: 100vh;
@@ -752,6 +757,11 @@ h6 {
 @media (max-width: 20em) {
   .page__services {
     padding-bottom: 1.25rem;
+  }
+}
+@media (max-width: 47.99875em) {
+  .page__services {
+    background: url("../img/10.jpg") center/cover no-repeat;
   }
 }
 
@@ -933,6 +943,11 @@ h6 {
 @media (max-width: 20em) {
   .page__about {
     padding-bottom: 1.25rem;
+  }
+}
+@media (max-width: 47.99875em) {
+  .page__about {
+    background: url("../img/full.jpeg") center/cover no-repeat;
   }
 }
 
