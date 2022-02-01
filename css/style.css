@@ -304,11 +304,11 @@ h6 {
 }
 .title_watch {
   transition: all 0.8s ease 0s;
-  transform: translate(0px, 100px);
+  transform: scale(0);
   opacity: 0;
 }
 .title_watch._watcher-view {
-  transform: translate(0px, 0px);
+  transform: scale(1);
   opacity: 1;
 }
 @media (min-width: 120em) {
@@ -631,6 +631,15 @@ h6 {
   opacity: 0;
   transform: translate(0%, 100%);
 }
+.footer__list li:nth-child(1) {
+  transition: all 0.8s ease 0s;
+}
+.footer__list li:nth-child(2) {
+  transition: all 0.8s ease 0.1s;
+}
+.footer__list li:nth-child(3) {
+  transition: all 0.8s ease 0.3s;
+}
 .footer__list._watcher-view li {
   opacity: 1;
   transform: translate(0%, 0px);
@@ -693,50 +702,6 @@ h6 {
 .page__fullscreen {
   background: url("../img/full.jpeg") center/cover no-repeat fixed;
 }
-@media (min-width: 120em) {
-  .page__fullscreen {
-    padding-top: 6.25rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 120em) {
-  @supports (padding-top: clamp( 6.25rem , 6.25rem  +  0vw , 6.25rem )) {
-    .page__fullscreen {
-      padding-top: clamp( 6.25rem , 6.25rem  +  0vw , 6.25rem );
-    }
-  }
-  @supports not (padding-top: clamp( 6.25rem , 6.25rem  +  0vw , 6.25rem )) {
-    .page__fullscreen {
-      padding-top: calc(6.25rem + 0 * (100vw - 20rem) / 100);
-    }
-  }
-}
-@media (max-width: 20em) {
-  .page__fullscreen {
-    padding-top: 6.25rem;
-  }
-}
-@media (min-width: 120em) {
-  .page__fullscreen {
-    padding-bottom: 3.125rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 120em) {
-  @supports (padding-bottom: clamp( 1.25rem , 0.875rem  +  1.875vw , 3.125rem )) {
-    .page__fullscreen {
-      padding-bottom: clamp( 1.25rem , 0.875rem  +  1.875vw , 3.125rem );
-    }
-  }
-  @supports not (padding-bottom: clamp( 1.25rem , 0.875rem  +  1.875vw , 3.125rem )) {
-    .page__fullscreen {
-      padding-bottom: calc(1.25rem + 1.875 * (100vw - 20rem) / 100);
-    }
-  }
-}
-@media (max-width: 20em) {
-  .page__fullscreen {
-    padding-bottom: 1.25rem;
-  }
-}
 @media (max-width: 47.99875em) {
   .page__fullscreen {
     background: url("../img/full.jpeg") center/cover no-repeat;
@@ -760,7 +725,7 @@ h6 {
   min-height: 100vh;
 }
 .fullscreen__body {
-  padding: 15px;
+  padding: 60px 15px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1317,7 +1282,7 @@ h6 {
 }
 @media (max-width: 47.99875em) {
   .about__image img:hover {
-    transform: scale(1.2);
+    transform: scale(1);
   }
 }
 .about__body {
