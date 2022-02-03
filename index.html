@@ -1,179 +1,379 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
+	<title>ES-Profi</title>
 	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220203174420">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Верстка «esprofi»</title>
 </head>
 
 <body>
-	<div class="rootpage">
-		<h1>Верстка «esprofi»</h1>
-		<div class="rootpage__info">
-			Особенности проекта
-		</div>
-		<h2>Готовые страницы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Главная</a></li>
-		</ol>
-		<h2>Попапы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html#"></a></li>
-		</ol>
-		<div class="rootpage__tnx">
-			<h2>Спасибо за заказ!</h2>
-			<p>Буду рад (а) хорошему отзыву.</p>
-			<p>Обращайтесь еще!</p>
-		</div>
-		<div class="rootpage__contacts">
-			<h2>Мои контакты:</h2>
-			<p>Почта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-			<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-			<p>Соц. сеть: <a href="">ссылка на соц. сеть</a></p>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<a href="#" class="header__logo" data-goto-header data-goto=".fullscreen"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture></a>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="#" class="menu__link" data-goto-header data-goto=".fullscreen">ES-Profi</a></li>
+								<li class="menu__item"><a href="#" class="menu__link" data-goto-header data-goto=".about">О нас </a>
+								</li>
+
+								<li class="menu__item"><a href="#" class="menu__link" data-goto-header data-goto=".services">Наши
+										услуги</a></li>
+								<li class="menu__item"><a href="#" class="menu__link" data-goto-header data-goto=".about__contacts">Контакты </a>
+								</li>
+
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__fullscreen fullscreen" data-watch="navigator">
+				<div class="fullscreen__container">
+					<div class="fullscreen__body">
+						<h1 class="fullscreen__title title">
+							Центр бухгалтерского учета
+							<br> <span>ES-Profi</span>
+						</h1>
+						<div class="fullscreen__text text">
+							Оказываем услуги по комплексному бухгалтерскому сопровождению
+						</div>
+						<p class="fullscreen__text text fullscreen__text_orange ">
+							"Ваш бизнес движется вперед, <br> а
+							мы его сопровождаем!"
+						</p>
+						<a href="#" class="fullscreen__btn btn" data-goto-header data-goto=".services">
+							Наши услуги
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="page__about about" data-watch="navigator">
+				<div class="about__container about__center">
+					<div class="about__body">
+						<h2 data-watch class="about__title title title_watch">О нас</h2>
+						<div class=" about__description">
+							<p data-watch class="about__text text text_watch">
+								Как часто Вам приходилось сталкиваться с необходимостью бухгалтерской помощи? Все эти отчеты и
+								термины, которые приводят в ужас начинающих бизнесменов и даже опытных! Наша задача помочь вам
+								разобраться во всем, научить грамотно вести Вашу бухгалтерию.
+								Наша компания работает в области бухгалтерского налогового учета уже более пяти лет, работаем
+								стабильно и
+								качественно, а наш функционал только растет!
+								Сдаем отчетнсоть в любой налоговый орган!</p>
+
+
+						</div>
+					</div>
+					<div class="sociale__sociale">
+						<div class="sociale__text">Связаться с нами:</div>
+
+						<ul data-watch class="sociale__list">
+							<li class="sociale__item"><a href="https://www.instagram.com/buhcentr_e_s_profi_/" target="blank" class="sociale__link _icon-insta"></a></li>
+							<!-- <li class="sociale__item"><a href="" class="sociale__link _icon-telegram"></a></li> -->
+							<li class="sociale__item"><a href="mailto:es-profi@bk.ru" class="sociale__link _icon-mail"></a>
+							</li>
+							<li class="sociale__item"><a href="tel:+79180991969" class="sociale__link _icon-phone"></a></li>
+
+
+						</ul>
+					</div>
+				</div>
+
+			</section>
+			<section class="page__services services" data-watch="navigator">
+				<div class="services__container">
+					<div class="services__body">
+						<h2 data-watch class="services__title title title_watch">
+							Наши Услуги
+						</h2>
+						<p data-watch class="services__descrition text text_watch">Мы оказываем как комплексные услуги по
+							бухгалтерскому и
+							кадровому сопровождению, так и разовые</p>
+					</div>
+					<div data-spollers data-one-spoller class="spollers">
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">Регистрация юридических лиц
+								и ИП</button>
+							<div class="spollers__body">
+								<div class="spollers__description">
+									<div class="spollers__img">
+										<picture><source srcset="img/06.webp" type="image/webp"><img src="img/06.png" alt=""></picture>
+									</div>
+									<p class="spollers__text text">Мы оказываем услуги по регистрации организаций и
+										индивидуальных
+										предпринимателей без посещений
+										ИФНС и нотариуса</p>
+								</div>
+							</div>
+						</div>
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">Сдача отчетности</button>
+							<div class="spollers__body">
+								<div class="spollers__description">
+									<div class="spollers__img">
+										<picture><source srcset="img/services/02.webp" type="image/webp"><img src="img/services/02.jpg" alt=""></picture>
+
+									</div>
+									<p class="spollers__text text">Отправляем отчеты в ИФНС, ФСС, ПФР по всей России</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">Ведение бухгалтерского и кадрового
+								учёта, налоговые вычеты <br> Работа с любыми системами налогообложения</button>
+							<div class="spollers__body">
+								<div class="spollers__description">
+									<div class="spollers__img">
+										<picture><source srcset="img/services/06.webp" type="image/webp"><img src="img/services/06.jpg" alt=""></picture>
+
+									</div>
+									<P class="spollers__text text">Комплексное ведение и восстановление вашего учёта, расчёт
+										заработной платы и налогов с неё, приём, увольнение сотрудников, минимизация налоговых
+										рисков, имущественные и социальные налоговые вычеты, работа со всеми налоговыми режимами
+									</P>
+								</div>
+							</div>
+						</div>
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">Смена руководителя</button>
+							<div class="spollers__body">
+								<div class="spollers__description">
+									<div class="spollers__img">
+										<picture><source srcset="img/services/03.webp" type="image/webp"><img src="img/services/03.jpg" alt=""></picture>
+
+									</div>
+									<p class="spollers__text text">Любые виды изменений в ЕГРЮЛ/ЕГРИП, смена юридического
+										адреса, смена руководителя компании, добавление / удаление ОКВЭД, смена наименования
+										организации</p>
+								</div>
+							</div>
+						</div>
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">Вход новых участников,Выпуск
+								ЭЦП</button>
+							<div class="spollers__body">
+								<div class="spollers__description">
+									<div class="spollers__img">
+										<picture><source srcset="img/services/07.webp" type="image/webp"><img src="img/services/07.png" alt=""></picture>
+
+									</div>
+									<p class="spollers__text text">Оказываем услуги по входу нового участника в Общество,
+										выпускаем электронные подписи на физических лиц, а так же предоставляем носители для
+										выпуска электронных подписей на юридические лица</p>
+								</div>
+							</div>
+						</div>
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">Онлайн консультации</button>
+							<div class="spollers__body">
+								<div class="spollers__description">
+									<div class="spollers__img">
+										<picture><source srcset="img/services/05.webp" type="image/webp"><img src="img/services/05.jpg" alt=""></picture>
+
+									</div>
+									<p class="spollers__text text">Консультации по ведению и восстановлению бухгалтерского
+										учёта, налоговым вычетам</p>
+								</div>
+							</div>
+						</div>
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">Получение патента</button>
+							<div class="spollers__body">
+								<div class="spollers__description">
+									<div class="spollers__img">
+										<picture><source srcset="img/services/08.webp" type="image/webp"><img src="img/services/08.jpg" alt=""></picture>
+
+									</div>
+									<p class="spollers__text text">Помощь в получении патента, расчёте налога, подача заявлений
+										в электронном виде в любую ФНС России</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sociale__sociale">
+						<div class="sociale__text">Связаться с нами:</div>
+
+						<ul data-watch class="sociale__list">
+							<li class="sociale__item"><a href="https://www.instagram.com/buhcentr_e_s_profi_/" target="blank" class="sociale__link _icon-insta"></a></li>
+							<!-- <li class="sociale__item"><a href="" class="sociale__link _icon-telegram"></a></li> -->
+							<li class="sociale__item"><a href="mailto:es-profi@bk.ru" class="sociale__link _icon-mail"></a>
+							</li>
+							<li class="sociale__item"><a href="tel:+79180991969" class="sociale__link _icon-phone"></a></li>
+
+
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="page__about about" data-watch="navigator">
+				<div class="about__container">
+					<div class="about__body">
+
+						<div class=" about__description">
+
+							<div class="about__contacts">
+								<h2 data-watch class="about__title title title_watch">Наши контакты </h2>
+
+								<ul data-watch class="about__list">
+									<li class="about__item">
+										<a href="mailto:es-profi@bk.ru" class="about__link _icon-mail">es-profi@bk.ru</a>
+									</li>
+									<li class="about__item">
+										<a href="https://www.instagram.com/buhcentr_e_s_profi_/" target="blank" class="about__link _icon-insta">buhcentr_e_s_profi_
+										</a>
+									</li>
+									<li class="about__item">
+										<a href="tel:+79180991969" class="about__link _icon-phone">89180991969</a>
+									</li>
+									<li class="about__item">
+										<a href="#" class="about__link _icon-location">Краснодар, ул.Ялтинская 14, офис 208</a>
+									</li>
+
+								</ul>
+								<h2 data-watch class="about__title title title_watch">Как нас найти?</h2>
+								<div data-watch class="about__map">
+									<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A33943517a9157d15ec1911e9c1e22883f956c1f6877842247dc1ac0fd42e2527&amp;source=constructor" frameborder="0"></iframe>
+								</div>
+							</div>
+						</div>
+						<h2 data-watch class="about__title title title_watch">Отзывы о наших услугах </h2>
+
+						<!-- Оболочка слайдера -->
+						<div class="about__slider swiper">
+							<!-- Двигающееся часть слайдера -->
+							<div class="about__wrapper swiper-wrapper">
+								<!-- Слайд -->
+								<div class="about__slide swiper-slide">
+									<div class="about__review">
+										<div class="about_avatar">
+											<picture><source srcset="img/name/02.webp" type="image/webp"><img src="img/name/02.png" alt=""></picture>
+
+										</div>
+										<div class="about__name">Анна Самофал </div>
+										<p class="about__text text">Хорошая аутсорсинговая фирам, помогает нам вести
+											бухгалтерский и налоговый учет.
+											Сотрудники относятся к своей работе со всей ответсвенностью. За время сотрудничества
+											никаких претений к ним не возникло. Рекомендую </p>
+									</div>
+								</div>
+								<div class="about__slide swiper-slide">
+									<div class="about__review">
+										<div class="about_avatar">
+											<picture><source srcset="img/name/01.webp" type="image/webp"><img src="img/name/01.png" alt=""></picture>
+										</div>
+										<div class="about__name">Николай Кривошеев</div>
+										<p class="about__text text">Эта компания знает все о налогах, даже нюансы юридического
+											характера. Отличная бухгалтерская компания - мы пользуемся их услугами уже больше
+											полугода - со стороны налоговой никаких претензий.</p>
+									</div>
+
+								</div>
+								<div class="about__slide swiper-slide">
+									<div class="about__review">
+										<div class="about_avatar">
+											<picture><source srcset="img/name/03.webp" type="image/webp"><img src="img/name/03.png" alt=""></picture>
+
+										</div>
+										<div class="about__name">Николай</div>
+										<p class="about__text text">Воспользовался услугами данной фирмы, грамотный специалист,
+											вежливый) будем сотрудничать)</p>
+									</div>
+
+								</div>
+							</div>
+							<!-- Если нужна пагинация -->
+							<div class="swiper-pagination"></div>
+							<!-- Если нужна навигация (влево/вправо) -->
+							<button type="button" class="swiper-button-prev"></button>
+							<button type="button" class="swiper-button-next"></button>
+							<!-- Если нужен скролбар -->
+							<!-- <div class="swiper-scrollbar"></div> -->
+						</div>
+						<h2 data-watch class="about__title title title_watch">Благодарственные письма </h2>
+
+						<div class="about__mails">
+
+							<div class="about__image">
+								<picture><source srcset="img/mails/01.webp" type="image/webp"><img src="img/mails/01.png" alt=""></picture>
+							</div>
+							<div class="about__image">
+								<picture><source srcset="img/mails/02.webp" type="image/webp"><img src="img/mails/02.png" alt=""></picture>
+							</div>
+							<div class="about__image">
+								<picture><source srcset="img/mails/03.webp" type="image/webp"><img src="img/mails/03.png" alt=""></picture>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<article class="page__call call">
+				<div class="call__body">
+					<a href="tel:+79180991969" class="call__link _icon-phone"></a>
+				</div>
+			</article>
+
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__description">
+					<p class="footer__text text">По всем вопросам, касательно бухгалтерских услуг, будем рады ответить в Директ и
+						по телефону 89180991969 Главный бухгалтер Кривошеева Софья Петровна.</p>
+
+					<p class="footer__text text">"Ваш бизнес движется вперед, а мы его сопровождаем!"</p>
+
+					<p class="footer__text text">© 2022 ES-PROFI - Все права защищены .</p>
+					<p class="footer__text text">Наш адресс :
+						<a href="#" class="about__link _icon-location">Краснодар,
+							ул.Ялтинская 14, офис 208</a>
+					</p>
+
+
+
+
+				</div>
+				<div class="footer__sociale">
+					<div class="footer__text">Связаться с нами:</div>
+					<ul data-watch class="footer__list">
+						<li class="footer__item"><a href="https://www.instagram.com/buhcentr_e_s_profi_/" target="blank" class="footer__link _icon-insta"></a></li>
+						<!-- <li class="footer__item"><a href="" class="footer__link _icon-telegram"></a></li> -->
+						<li class="footer__item"><a href="mailto:es-profi@bk.ru" class="footer__link _icon-mail"></a></li>
+						<li class="footer__item"><a href="tel:+79180991969" class="footer__link _icon-phone"></a></li>
+
+
+					</ul>
+				</div>
+
+			</div>
+		</footer>
+	</div>
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
 		</div>
 	</div>
+</div>
+ -->
+
+	<script src="js/app.min.js?_v=20220203174420"></script>
 </body>
-<style>
-	@charset "UTF-8";
-	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-
-	*,
-	*::before,
-	*::after {
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		box-sizing: border-box;
-	}
-
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		min-width: 320px;
-		width: 100%;
-		color: #fff;
-		background-color: #5e5373;
-	}
-
-	body {
-		font-family: Montserrat;
-		font-size: 100%;
-		line-height: 1;
-		font-size: 1rem;
-	}
-
-	a {
-		text-decoration: underline;
-		color: #ebe691
-	}
-
-	a:visited {
-		text-decoration: underline;
-		color: #aaa768;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	img {
-		vertical-align: top;
-	}
-
-	.wrapper {
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-	}
-
-	.rootpage {
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	@media (max-width: 767px) {
-		.rootpage {
-			padding: 30px 15px;
-		}
-	}
-
-	h1 {
-		color: #ebe691;
-		font-size: 2.5rem;
-		margin: 0px 0px 1.25rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h1 {
-			font-size: 1.85rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-	}
-
-	h2 {
-		color: #ebe691;
-		font-size: 1.25rem;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h2 {
-			font-size: 1.125rem;
-			margin: 0px 0px 1rem 0px;
-		}
-	}
-
-	.rootpage__info {
-		line-height: 140%;
-		margin: 0px 0px 1.5rem 0px;
-	}
-
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
-	}
-
-	.rootpage__list li:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-	}
-
-	.rootpage__contacts,
-	.rootpage__tnx {
-		border-radius: 200px;
-		padding: 20px 65px;
-		line-height: 140%;
-	}
-
-	@media (max-width: 767px) {
-
-		.rootpage__contacts,
-		.rootpage__tnx {
-			border-radius: 40px;
-			padding: 20px;
-		}
-	}
-
-	.rootpage__contacts {
-		background: #32b5a4;
-
-	}
-
-	.rootpage__contacts a {
-		color: #ebe691;
-	}
-
-	.rootpage__tnx {
-		background: #c22d63;
-		margin: 0px 0px 1rem 0px;
-	}
-</style>
 
 </html>
