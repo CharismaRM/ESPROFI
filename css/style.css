@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Gelasio:regular,italic,500,500italic,600,600italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Arvo:regular,italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Caveat:regular,500,600,700);
 @charset "UTF-8";
 @font-face {
   font-family: icons;
@@ -104,7 +108,7 @@ body {
 body {
   color: #333;
   line-height: 1;
-  font-family: "Gelasio";
+  font-family: "Roboto";
   font-size: 1.25rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -116,7 +120,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Gelasio";
+  font-family: "Roboto";
   font-size: inherit;
 }
 
@@ -300,6 +304,7 @@ h6 {
 .title {
   color: #333;
   text-align: center;
+  margin: 0px 0px 20px 0px;
   line-height: 150%;
 }
 .title_watch {
@@ -719,8 +724,8 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.384);
+  backdrop-filter: blur(6px);
   width: 100%;
   min-height: 100vh;
 }
@@ -737,44 +742,70 @@ h6 {
 .fullscreen__title {
   text-transform: uppercase;
   text-align: center;
-  color: #333;
-}
-.fullscreen__title span {
-  color: #fe5b38;
-}
-.fullscreen__text {
-  text-align: center;
   color: #000;
 }
-.fullscreen__text_orange {
-  color: #fe5b38;
-  font-weight: 700;
-  position: relative;
-  -webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) alternate both 0.5s;
-  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) alternate both 0.5s;
-  text-shadow: 1px 1px 2px #333, 0 0 1em #000, 0 0 0.2em #333;
-}
 @media (min-width: 120em) {
-  .fullscreen__text_orange {
-    font-size: 2rem;
+  .fullscreen__title {
+    font-size: 3.75rem;
   }
 }
 @media (min-width: 20em) and (max-width: 120em) {
-  @supports (font-size: clamp( 1.5rem , 1.4rem  +  0.5vw , 2rem )) {
-    .fullscreen__text_orange {
-      font-size: clamp( 1.5rem , 1.4rem  +  0.5vw , 2rem );
+  @supports (font-size: clamp( 2.25rem , 1.95rem  +  1.5vw , 3.75rem )) {
+    .fullscreen__title {
+      font-size: clamp( 2.25rem , 1.95rem  +  1.5vw , 3.75rem );
     }
   }
-  @supports not (font-size: clamp( 1.5rem , 1.4rem  +  0.5vw , 2rem )) {
-    .fullscreen__text_orange {
-      font-size: calc(1.5rem + 0.5 * (100vw - 20rem) / 100);
+  @supports not (font-size: clamp( 2.25rem , 1.95rem  +  1.5vw , 3.75rem )) {
+    .fullscreen__title {
+      font-size: calc(2.25rem + 1.5 * (100vw - 20rem) / 100);
     }
   }
 }
 @media (max-width: 20em) {
-  .fullscreen__text_orange {
-    font-size: 1.5rem;
+  .fullscreen__title {
+    font-size: 2.25rem;
   }
+}
+.fullscreen__title span {
+  color: #fe5b38;
+  text-shadow: 3px 3px 3px #333, 0 0 1em #fe5b38, 0 0 0.2em #333;
+}
+.fullscreen__text {
+  text-align: center;
+  color: #000;
+  line-height: 140%;
+}
+@media (min-width: 120em) {
+  .fullscreen__text {
+    font-size: 3.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 120em) {
+  @supports (font-size: clamp( 1.75rem , 1.475rem  +  1.375vw , 3.125rem )) {
+    .fullscreen__text {
+      font-size: clamp( 1.75rem , 1.475rem  +  1.375vw , 3.125rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.75rem , 1.475rem  +  1.375vw , 3.125rem )) {
+    .fullscreen__text {
+      font-size: calc(1.75rem + 1.375 * (100vw - 20rem) / 100);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .fullscreen__text {
+    font-size: 1.75rem;
+  }
+}
+.fullscreen__text_orange {
+  color: #CC9900;
+  font-family: Caveat;
+  font-weight: 700;
+  position: relative;
+  -webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) alternate both 0.5s;
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) alternate both 0.5s;
+  text-shadow: 3px 3px 3px #333, 0 0 1em #CC9900, 0 0 0.2em #333;
+  line-height: 120%;
 }
 @-webkit-keyframes tracking-in-expand {
   0% {
