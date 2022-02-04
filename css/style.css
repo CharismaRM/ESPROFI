@@ -1,9 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Gelasio:regular,italic,500,500italic,600,600italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Arvo:regular,italic,700,700italic);
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
-@import url(https://fonts.googleapis.com/css?family=Caveat:regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Reggae+One:regular);
 @import url(https://fonts.googleapis.com/css?family=Lobster:regular);
-@import url(https://fonts.googleapis.com/css?family=Marck+Script:regular);
+@import url(https://fonts.googleapis.com/css?family=Caveat:regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Balsamiq+Sans:regular,italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Russo+One:regular);
 @charset "UTF-8";
 @font-face {
   font-family: icons;
@@ -744,6 +745,7 @@ h6 {
   text-transform: uppercase;
   -webkit-animation: bounce-top 0.9s 1s alternate both;
   animation: bounce-top 0.9s 1s alternate both;
+  font-family: Russo One;
   text-align: center;
   color: #000;
 }
@@ -774,13 +776,13 @@ h6 {
   text-shadow: 3px 3px 3px #333, 0 0 1em #fe5b38, 0 0 0.2em #333;
   -webkit-animation: rotate-in-2-br-cw 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate both;
   animation: rotate-in-2-br-cw 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate both;
+  font-family: Russo One;
 }
 .fullscreen__text {
   text-align: center;
   color: #000;
   line-height: 140%;
-  -webkit-animation: bounce-right 0.8s 2s both;
-  animation: bounce-right 0.8s 2s both;
+  font-family: Balsamiq Sans;
 }
 @media (min-width: 120em) {
   .fullscreen__text {
@@ -806,14 +808,14 @@ h6 {
 }
 .fullscreen__text_orange {
   color: #cc9900;
-  font-family: Marck Script;
+  font-family: Caveat;
   font-weight: 700;
   position: relative;
   text-shadow: 3px 3px 3px #333, 0 0 1em #cc9900, 0 0 0.2em #333;
   line-height: 120%;
   opacity: 0;
   transform: translate(0px, 100%);
-  animation: textup 1s forwards 3s;
+  animation: textup 1s forwards 2s;
 }
 @media (min-width: 120em) {
   .fullscreen__text_orange {
@@ -837,8 +839,14 @@ h6 {
     font-size: 1.75rem;
   }
 }
+@media (max-width: 29.99875em) {
+  .fullscreen__text_orange ._icon-arrow-up {
+    display: none;
+  }
+}
 .fullscreen__text_orange ._icon-arrow-up::before {
-  animation: arrowtup 1s infinite forwards;
+  animation: arrowtup 2s infinite forwards;
+  display: inline-block;
 }
 .fullscreen__down {
   font-size: 40px;
@@ -853,7 +861,7 @@ h6 {
     transform: translate(0px, 0px);
   }
   50% {
-    transform: translate(0px, 20px);
+    transform: translate(0px, 10px);
   }
   100% {
     transform: translate(0px, 0px);
@@ -1046,10 +1054,10 @@ h6 {
     transform: translateX(48px);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
-    opacity: 1;
+    opacity: 0;
   }
   24% {
-    opacity: 1;
+    opacity: 0;
   }
   40% {
     -webkit-transform: translateX(26px);
