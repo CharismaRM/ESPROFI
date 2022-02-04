@@ -1,10 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Gelasio:regular,italic,500,500italic,600,600italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Arvo:regular,italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Reggae+One:regular);
-@import url(https://fonts.googleapis.com/css?family=Lobster:regular);
+@import url(https://fonts.googleapis.com/css?family=Pacifico:regular);
 @import url(https://fonts.googleapis.com/css?family=Caveat:regular,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Balsamiq+Sans:regular,italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Russo+One:regular);
+@import url(https://fonts.googleapis.com/css?family=Dela+Gothic+One:regular);
 @charset "UTF-8";
 @font-face {
   font-family: icons;
@@ -110,7 +111,7 @@ body {
 body {
   color: #333;
   line-height: 1;
-  font-family: "Roboto";
+  font-family: "Balsamiq Sans";
   font-size: 1.25rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -122,7 +123,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Roboto";
+  font-family: "Balsamiq Sans";
   font-size: inherit;
 }
 
@@ -521,9 +522,11 @@ h6 {
   transition: all 0.3s ease 0s;
   border-radius: 20px;
 }
-.menu__link:hover {
-  background: #fe5b38;
-  box-shadow: 0px 0px 20px #fe5b38;
+@media (min-width: 47.99875em) {
+  .menu__link:hover {
+    background: #fe5b38;
+    box-shadow: 0px 0px 20px #fe5b38;
+  }
 }
 
 .icon-menu {
@@ -745,9 +748,10 @@ h6 {
   text-transform: uppercase;
   -webkit-animation: bounce-top 0.9s 1s alternate both;
   animation: bounce-top 0.9s 1s alternate both;
-  font-family: Russo One;
+  font-family: "Dela Gothic One";
   text-align: center;
-  color: #000;
+  color: #fff;
+  text-shadow: 3px 3px 3px #333, 0 0 1em #fff, 0 0 0.2em #333;
 }
 @media (min-width: 120em) {
   .fullscreen__title {
@@ -772,17 +776,18 @@ h6 {
   }
 }
 .fullscreen__title span {
-  color: #fe5b38;
-  text-shadow: 3px 3px 3px #333, 0 0 1em #fe5b38, 0 0 0.2em #333;
-  -webkit-animation: rotate-in-2-br-cw 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate both;
-  animation: rotate-in-2-br-cw 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate both;
+  color: #fff;
+  text-shadow: 3px 3px 3px #333, 0 0 1em #fff, 0 0 0.2em #333;
+  -webkit-animation: rotate-in-2-br-cw 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate both;
+  animation: rotate-in-2-br-cw 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate both;
   font-family: Russo One;
 }
 .fullscreen__text {
   text-align: center;
-  color: #000;
+  font-family: "Dela Gothic One";
+  color: #fff;
+  text-shadow: 3px 3px 3px #333, 0 0 1em #fff, 0 0 0.2em #333;
   line-height: 140%;
-  font-family: Balsamiq Sans;
 }
 @media (min-width: 120em) {
   .fullscreen__text {
@@ -807,11 +812,11 @@ h6 {
   }
 }
 .fullscreen__text_orange {
-  color: #cc9900;
-  font-family: Caveat;
-  font-weight: 700;
+  font-family: "Dela Gothic One";
+  text-align: center;
+  color: #fff;
+  text-shadow: 3px 3px 3px #333, 0 0 1em #fff, 0 0 0.2em #333;
   position: relative;
-  text-shadow: 3px 3px 3px #333, 0 0 1em #cc9900, 0 0 0.2em #333;
   line-height: 120%;
   opacity: 0;
   transform: translate(0px, 100%);
@@ -819,24 +824,24 @@ h6 {
 }
 @media (min-width: 120em) {
   .fullscreen__text_orange {
-    font-size: 3.125rem;
+    font-size: 2.875rem;
   }
 }
 @media (min-width: 20em) and (max-width: 120em) {
-  @supports (font-size: clamp( 1.75rem , 1.475rem  +  1.375vw , 3.125rem )) {
+  @supports (font-size: clamp( 1.5rem , 1.225rem  +  1.375vw , 2.875rem )) {
     .fullscreen__text_orange {
-      font-size: clamp( 1.75rem , 1.475rem  +  1.375vw , 3.125rem );
+      font-size: clamp( 1.5rem , 1.225rem  +  1.375vw , 2.875rem );
     }
   }
-  @supports not (font-size: clamp( 1.75rem , 1.475rem  +  1.375vw , 3.125rem )) {
+  @supports not (font-size: clamp( 1.5rem , 1.225rem  +  1.375vw , 2.875rem )) {
     .fullscreen__text_orange {
-      font-size: calc(1.75rem + 1.375 * (100vw - 20rem) / 100);
+      font-size: calc(1.5rem + 1.375 * (100vw - 20rem) / 100);
     }
   }
 }
 @media (max-width: 20em) {
   .fullscreen__text_orange {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 29.99875em) {
@@ -848,9 +853,12 @@ h6 {
   animation: arrowtup 2s infinite forwards;
   display: inline-block;
 }
+.fullscreen__btn {
+  text-align: center;
+}
 .fullscreen__down {
   font-size: 40px;
-  color: #fe5b38;
+  color: #fff;
 }
 .fullscreen__down::before {
   animation: animate 2s infinite;
